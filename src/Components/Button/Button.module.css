@@ -1,0 +1,70 @@
+.button {
+    @apply relative overflow-hidden tracking-wider text-base inline-block bg-transparent text-center rounded-none px-0 pt-0 pb-0;
+  }
+  
+  .button::before {
+    @apply absolute block left-0 bottom-0;
+  }
+  .button::before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    border-bottom-right-radius: 70%;
+    transition: transform 300ms cubic-bezier(0.46, 0.03, 0.52, 0.96) 0ms;
+    transform: translate(-50%, -50%);
+  }
+  
+  .button:hover::before {
+    transform: translate(-40%, 40%);
+  }
+  .buttonSpan {
+    @apply relative block font-medium pt-2 transition leading-6 ease-in-out duration-150 border-transparent border-2 py-2 px-9;
+  }
+  /* ======== Primary Button ======== */
+  
+  .buttonPrimary {
+    @apply text-primary bg-secondary;
+
+  }
+  .buttonPrimary:hover,
+  .buttonPrimary:active {
+    @apply text-primary;
+  }
+  .buttonPrimary::before {
+    @apply bg-white;
+  }
+  
+  .buttonSpanPrimary {
+    @apply border-secondary;
+  }
+  
+  /*============= Secondary Button ======== */
+  .buttonSecondary {
+    @apply text-primary;
+  }
+  .buttonSecondary::before {
+    @apply bg-secondary;
+  }
+  .buttonSecondary:hover .buttonSpanSecondary,
+  .buttonSecondary:active .buttonSpanSecondary {
+    @apply text-primary;
+  }
+  .buttonSpanSecondary {
+    @apply border-secondary;
+  }
+  
+  /*============= Neutral Button ======== */
+  .buttonNeutral {
+    @apply text-secondary;
+  }
+  .buttonNeutral::before {
+    @apply bg-white;
+  }
+  .buttonNeutral:hover .buttonSpanNeutral,
+  .buttonNeutral:active .buttonSpanNeutral {
+    @apply text-black;
+  }
+  .buttonSpanNeutral {
+    @apply border-white;
+  }
+  

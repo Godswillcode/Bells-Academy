@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #00828c;
+  --secondary: #ffc400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*######  EXTRA CSS STYLE ######*/
+
+/*-- General Banner ---*/
+.banner {
+   height: 40vh;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.5) url('./Images/banner.jpg');
+   background-blend-mode: overlay;
+   background-position: center;
+}
+
+/*-- Home Page ---*/
+
+/* Hero carousel */
+.h-carousel {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+
+/*-- PayFees Page ---*/
+.pay {
+  height: calc(100vh - 4rem);
+  background: rgba(0, 0, 0, 0.7) url('./Images/money.jpg');
+  background-position:  center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+/* Testimonial component */
+.testimonial {
+  @apply bg-white py-4 px-2 text-center border-2 border-secondary rounded-md mx-3 mb-5;
+}
+
+
+ /* BACK TO TOP */
+.scroll-to-top {
+  bottom: 13px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 200;
+}
+
+.scroll-to-top .icon {
+  margin-top: 10px;
+  animation: scrollTop 0.5s alternate ease infinite;
+}
+
+@keyframes scrollTop {
+  from {
+    transform: translateY(2px);
+  }
+  to {
+    transform: translateY(-1px);
+  }
+}
+
+
+
