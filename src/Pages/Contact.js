@@ -32,10 +32,10 @@ const Contact = () => {
     } else {
       send("gmail", "template_ru8l7ls", person, process.env.REACT_APP_API_KEY)
         .then((response) => {
-          alert("SUCCESS!", response.status, response.text);
+          alert("Message sent!", response.status, response.text);
         })
         .catch((err) => {
-          alert("FAILED...", err);
+          alert("Message failed try again!", err);
         });
 
       setPerson(initialState);
