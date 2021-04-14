@@ -3,10 +3,17 @@ import WhyUs from "../Components/About/WhyUs";
 import PlanVisit from "../Components/PlanVisit";
 import Testimonial from "../Components/Testimonial";
 import aboutImg from "../Images/about.jpg";
+import { motion } from 'framer-motion';
+import { animationOne, transition } from '../Animation/index';
 
 const About = () => {
   return (
-    <div>
+    <motion.div
+    initial='out'
+    animate='in'
+    exit='out'
+    variants={animationOne}
+    transition={transition}>
       {/* Banner */}
       <div className="banner text-white flex justify-center text-center items-center px-5">
         <div>
@@ -30,15 +37,14 @@ const About = () => {
             <div className="bg-secondary w-24 h-1 mb-5"></div>
             <div className="text-justify">
               <p>
-                Bell's Academy is an ingenious school that
-                provides your child with world-class educational experience. As
-                one of the top international schools in Lekki Lagos, we combine
-                the best educational practice with the most current innovative
-                approach to learning, to equip your child for an exceptional
-                future in a swiftly dynamic world. We have advanced an approach
-                to education that balances academic expertise, self and social
-                intelligence, creativity, critical thinking and digital
-                literacy.
+                Bell's Academy is an ingenious school that provides your child
+                with world-class educational experience. As one of the top
+                international schools in Lekki Lagos, we combine the best
+                educational practice with the most current innovative approach
+                to learning, to equip your child for an exceptional future in a
+                swiftly dynamic world. We have advanced an approach to education
+                that balances academic expertise, self and social intelligence,
+                creativity, critical thinking and digital literacy.
               </p>
               <p className="pt-4">
                 Your child’s unique needs are met through an integrated
@@ -66,7 +72,7 @@ const About = () => {
       <WhyUs />
       <Testimonial />
       <PlanVisit />
-    </div>
+    </motion.div>
   );
 };
 

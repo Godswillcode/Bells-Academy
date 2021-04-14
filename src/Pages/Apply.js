@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import PlanVisit from "../Components/PlanVisit";
+import { motion } from 'framer-motion';
+import { animationOne, transition } from '../Animation/index';
 
 const Apply = () => {
   return (
-    <div>
+    <motion.div
+    initial='out'
+    animate='in'
+    exit='out'
+    variants={animationOne}
+    transition={transition}>
       {/* Banner */}
       <div className="banner text-white flex justify-center text-center items-center px-5">
         <div>
@@ -205,7 +212,7 @@ const Apply = () => {
       </div>
 
       <PlanVisit />
-    </div>
+    </motion.div>
   );
 };
 

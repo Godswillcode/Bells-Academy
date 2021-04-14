@@ -1,6 +1,10 @@
+import { motion } from 'framer-motion';
+import { animationTwo, transition } from '../Animation/index';
+
 const PayFees = () => {
   return (
-    <div className="pay flex justify-center items-center text-white px-4">
+      <motion.div initial='out' animate='in' exit='out' variants={animationTwo} transition={transition}>
+        <div className="pay flex justify-center items-center text-white px-4">
       <div className="border-2 border-secondary px-3 md:px-10 pt-16 bg-primary">
         <div className="text-xl sm:text-2xl md:text-3xl font-medium ">
           <h2 className="pb-2">Account Name : Godswill Onyeka</h2>
@@ -17,6 +21,7 @@ const PayFees = () => {
         </p>
       </div>
     </div>
+      </motion.div>
   );
 };
 

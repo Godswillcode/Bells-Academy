@@ -3,10 +3,12 @@ import Button from "../Components/Button/Button";
 import PlanVisit from "../Components/PlanVisit";
 import Testimonial from "../Components/Testimonial";
 import AdmImage from "../Images/admission.jpg";
+import { motion } from 'framer-motion';
+import { animationTwo, transition } from '../Animation/index';
 
 const Admission = () => {
   return (
-    <div>
+    <motion.div initial='out' animate='in' exit='out' variants={animationTwo} transition={transition}>
       {/* Banner */}
       <div className="banner text-white flex justify-center text-center items-center px-5">
         <div>
@@ -69,7 +71,7 @@ const Admission = () => {
       {/* Components */}
       <Testimonial />
       <PlanVisit />
-    </div>
+    </motion.div>
   );
 };
 

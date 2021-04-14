@@ -5,7 +5,7 @@ import './Navbar.css'
 const Navbar = () => {
     const [isMobile, setIsMobile] = useState(false)
     return (
-        <nav className="navbar sticky top-0 bg-white w-full">
+        <nav className="navbar fixed top-0 bg-white w-full">
             <h3 className="logo uppercase font-medium text-primary md:pl-8">Bell's Academy</h3>
 
             <ul className={isMobile ? "nav-links-mobile": "nav-menu"} onClick={() => setIsMobile(false)}>

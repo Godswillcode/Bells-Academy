@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { academicData } from "../Components/AcademicData";
 import PlanVisit from "../Components/PlanVisit";
+import { motion } from 'framer-motion';
+import { animationOne, transition } from '../Animation/index';
 
 const Academics = () => {
   return (
-    <div>
+    <motion.div
+    initial='out'
+    animate='in'
+    exit='out'
+    variants={animationOne}
+    transition={transition}>
       {/* Banner */}
       <div className="banner text-white flex justify-center text-center items-center px-5">
         <div>
@@ -42,7 +49,7 @@ const Academics = () => {
       </div>
 
       <PlanVisit />
-    </div>
+    </motion.div>
   );
 };
 

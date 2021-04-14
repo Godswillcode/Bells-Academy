@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, useLocation } from 'react-router-dom'
 import Layout from './Components/Layout'
 
 // Pages import
@@ -14,9 +14,10 @@ import PageNotFound from './Pages/404';
 
 
 function App() {
+  let location = useLocation();
   return (
     <Layout>
-       <Switch>
+       <Switch location={location} key={location.pathname}>
             <Route path="/" exact> <Home/> </Route>
             <Route path="/about"> <About/> </Route>
             <Route path="/academics"> <Academics/> </Route>

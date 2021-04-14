@@ -7,7 +7,8 @@ import slider1 from "../Images/slider-1.jpg";
 import slider2 from "../Images/slider-2.jpg";
 import slider3 from "../Images/slider-3.jpg";
 import Intro from "../Components/Home/Intro";
-
+import { motion } from 'framer-motion';
+import { animationTwo, transition } from '../Animation/index';
 
 function SampleNextArrow(props) {
   const { style } = props;
@@ -33,7 +34,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <motion.div initial='out' animate='in' exit='out' variants={animationTwo} transition={transition}>
       <div className="text-white">
         <Slider {...settings}>
           <div>
@@ -49,7 +50,7 @@ const Home = () => {
                   Our online courses are built in partnership with technology
                   leaders and are designed to meet industry demands.
                 </h3>
-                <Button type="primary" as="link" to="/">
+                <Button type="primary" as="link" to="/academics">
                   Discover more
                 </Button>
               </div>
@@ -69,7 +70,7 @@ const Home = () => {
                   Our online courses are built in partnership with technology
                   leaders and are designed to meet industry demands.
                 </h3>
-                <Button type="primary" as="link" to="/">
+                <Button type="primary" as="link" to="/admission">
                   Lets Chat
                 </Button>
               </div>
@@ -90,7 +91,7 @@ const Home = () => {
                   Our online courses are built in partnership with technology
                   leaders and are designed to meet industry demands.
                 </h3>
-                <Button type="primary" as="link" to="/">
+                <Button type="primary" as="link" to="/about">
                   Discover more
                 </Button>
               </div>
@@ -100,10 +101,9 @@ const Home = () => {
       </div>
 
       {/* COMPONENT */}
-     
+
       <Intro />
-     
-    </>
+    </motion.div>
   );
 };
 

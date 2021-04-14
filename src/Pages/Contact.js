@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { send } from "emailjs-com";
-import validate from '../Components/validate'
+import validate from "../Components/validate";
+import { motion } from 'framer-motion';
+import { animationTwo, transition } from '../Animation/index';
 
 const initialState = {
   contactName: "",
@@ -14,7 +16,6 @@ const initialState = {
 const Contact = () => {
   const [person, setPerson] = useState(initialState);
   const [errorMsg, setErrorMsg] = useState(initialState);
-
 
   const handleChange = (e) => {
     setPerson({ ...person, [e.target.name]: e.target.value });
@@ -41,9 +42,8 @@ const Contact = () => {
     }
   };
 
-
   return (
-    <div>
+    <motion.div initial='out' animate='in' exit='out' variants={animationTwo} transition={transition}>
       {/* Banner */}
       <div className="banner text-white flex justify-center text-center items-center px-5">
         <div>
@@ -76,7 +76,9 @@ const Contact = () => {
                       value={person.contactName}
                       onChange={handleChange}
                     />
-                       <span className="block text-red-600">{errorMsg.contactName}</span>
+                    <span className="block text-red-600">
+                      {errorMsg.contactName}
+                    </span>
                   </div>
                   <div>
                     <input
@@ -88,7 +90,9 @@ const Contact = () => {
                       value={person.contactPhone}
                       onChange={handleChange}
                     />
-                       <span className="block text-red-600">{errorMsg.contactPhone}</span>
+                    <span className="block text-red-600">
+                      {errorMsg.contactPhone}
+                    </span>
                   </div>
                   <div>
                     <input
@@ -100,7 +104,9 @@ const Contact = () => {
                       value={person.contactEmail}
                       onChange={handleChange}
                     />
-                     <span className="block text-red-600">{errorMsg.contactEmail}</span>
+                    <span className="block text-red-600">
+                      {errorMsg.contactEmail}
+                    </span>
                   </div>
                   <div>
                     <input
@@ -112,7 +118,9 @@ const Contact = () => {
                       value={person.contactSubject}
                       onChange={handleChange}
                     />
-                     <span className="block text-red-600">{errorMsg.contactSubject}</span>
+                    <span className="block text-red-600">
+                      {errorMsg.contactSubject}
+                    </span>
                   </div>
                 </div>
                 <textarea
@@ -123,7 +131,9 @@ const Contact = () => {
                   value={person.contactMessage}
                   onChange={handleChange}
                 ></textarea>
-                 <span className="block text-red-600">{errorMsg.contactMessage}</span>
+                <span className="block text-red-600">
+                  {errorMsg.contactMessage}
+                </span>
                 <div className="flex justify-center mt-2">
                   <button
                     type="submit"
@@ -136,104 +146,104 @@ const Contact = () => {
             </div>
 
             {/* contact detail */}
-              <div>
+            <div>
               <h2 className="text-center text-2xl pb-5">REACH US</h2>
               <div className="text-center text-white font-medium text-base lg:text-lg border-2 border-secondary rounded-md py-2">
-              <div>
-                <div className="flex justify-center pt-1">
-                  <span className="flex justify-center bg-primary rounded-full p-2">
+                <div>
+                  <div className="flex justify-center pt-1">
+                    <span className="flex justify-center bg-primary rounded-full p-2">
+                      {" "}
+                      <svg
+                        className="w-h-7 h-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+                  <span>
+                    No.3 corner bus-stop, Epe-Epress <br />
+                    way sangotedo Ajah Lekki Lagos State
+                  </span>
+                </div>
+                <div className="mt-4">
+                  <div className="flex justify-center">
+                    <span className="flex justify-center bg-primary rounded-full p-2">
+                      <svg
+                        className="w-7 h-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+                  <span className="flex flex-wrap justify-center gap-4 pt-1">
                     {" "}
-                    <svg
-                      className="w-h-7 h-7"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <a
+                      href="tel:+234 90 389 683 45"
+                      className="hover:text-secondary"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      ></path>
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      ></path>
-                    </svg>
+                      +234 90 389 683 45
+                    </a>{" "}
+                    <a
+                      href="tel:+234 90 389 683 45"
+                      className="hover:text-secondary"
+                    >
+                      +234 90 389 683 45
+                    </a>
                   </span>
                 </div>
-                <span>
-                  No.3 corner bus-stop, Epe-Epress <br />
-                  way sangotedo Ajah Lekki Lagos State
-                </span>
-              </div>
-              <div className="mt-4">
-                <div className="flex justify-center">
-                  <span className="flex justify-center bg-primary rounded-full p-2">
-                    <svg
-                      className="w-7 h-7"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      ></path>
-                    </svg>
-                  </span>
-                </div>
-                <span className="flex flex-wrap justify-center gap-4 pt-1">
-                  {" "}
-                  <a
-                    href="tel:+234 90 389 683 45"
-                    className="hover:text-secondary"
-                  >
-                    +234 90 389 683 45
-                  </a>{" "}
-                  <a
-                    href="tel:+234 90 389 683 45"
-                    className="hover:text-secondary"
-                  >
-                    +234 90 389 683 45
-                  </a>
-                </span>
-              </div>
 
-              <div className="mt-3">
-                <div className="flex justify-center">
-                  <span className="flex justify-center bg-primary rounded-full p-2">
-                    <svg
-                      className="w-7 h-7"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      ></path>
-                    </svg>
-                  </span>
+                <div className="mt-3">
+                  <div className="flex justify-center">
+                    <span className="flex justify-center bg-primary rounded-full p-2">
+                      <svg
+                        className="w-7 h-7"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+                  <a
+                    href="mailto:info@bellsacademy"
+                    className="hover:text-secondary"
+                  >
+                    info@bellsacademy
+                  </a>
                 </div>
-                <a
-                  href="mailto:info@bellsacademy"
-                  className="hover:text-secondary"
-                >
-                  info@bellsacademy
-                </a>
               </div>
             </div>
-              </div>
           </div>
         </div>
       </div>
@@ -249,7 +259,7 @@ const Contact = () => {
         marginWidth="0"
         title="google map"
       ></iframe>
-    </div>
+    </motion.div>
   );
 };
 

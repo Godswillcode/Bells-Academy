@@ -23,11 +23,11 @@ html {
 
 /*-- General Banner ---*/
 .banner {
-   height: 40vh;
-   width: 100%;
-   background: rgba(0, 0, 0, 0.5) url('./Images/banner.jpg');
-   background-blend-mode: overlay;
-   background-position: center;
+  height: 40vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5) url("./Images/banner.jpg");
+  background-blend-mode: overlay;
+  background-position: center;
 }
 
 /*-- Home Page ---*/
@@ -42,12 +42,11 @@ html {
   background-blend-mode: overlay;
 }
 
-
 /*-- PayFees Page ---*/
 .pay {
   height: calc(100vh - 4rem);
-  background: rgba(0, 0, 0, 0.7) url('./Images/money.jpg');
-  background-position:  center;
+  background: rgba(0, 0, 0, 0.7) url("./Images/money.jpg");
+  background-position: center;
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -57,8 +56,7 @@ html {
   @apply bg-white py-4 px-2 text-center border-2 border-secondary rounded-md mx-3 mb-5;
 }
 
-
- /* BACK TO TOP */
+/* BACK TO TOP */
 .scroll-to-top {
   bottom: 13px;
   right: 0;
@@ -80,6 +78,3 @@ html {
     transform: translateY(-1px);
   }
 }
-
-
-
