@@ -12,7 +12,7 @@ const Layout = ({children}) => {
   return (
     <div className="overflow-x-hidden">
        <Navbar/>
-       <div className="mb-10"></div>
+       <div className="mb-16"></div>
        <BackToTop/>
        <StartTop/>
        <AnimatePresence exitBeforeEnter>

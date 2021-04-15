@@ -24,7 +24,8 @@ const Home = () => {
   const settings = {
     className: "",
     infinite: true,
-    speed: 3000,
+    speed: 2000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
