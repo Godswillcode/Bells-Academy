@@ -2,8 +2,8 @@ const validate = (person) => {
     let errors = {};
     if (!person.contactName.trim()) {
       errors.contactName = "Name is required";
-    // } else if (!person.contactName.match(/^[A-Za-z]+$/)) {
-    //   errors.contactName = "Name must not contain number";
+     } else if (!person.contactName.match(/^[a-z ,.'-]+$/i)) {
+       errors.contactName = "Name must not contain number";
     }
   
     if (!person.contactEmail.trim()) {
