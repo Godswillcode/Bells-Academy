@@ -101,7 +101,7 @@ const WhyUs = () => {
               <p>
                 We strive to be the incubator of knowledge and orientation
                 required to provide and create the change needed for national
-                development and transformation
+                development and transformation.
               </p>
             </div>
           </div>
