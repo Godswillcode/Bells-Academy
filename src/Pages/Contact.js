@@ -49,7 +49,7 @@ const Contact = () => {
         <div>
           <h3 className="text-2xl md:text-4xl font-medium pb-1">Contact us</h3>
           <h4 className="font-medium">
-            <Link to="/" className="text-secondary">
+            <Link to="/" className="text-secondary"> 
               Home
             </Link>{" "}
             / Contact
@@ -171,7 +171,7 @@ const Contact = () => {
                           strokeLinejoin="round"
                           strokeWidth="2"
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        ></path>
+                        ></path> 
                       </svg>
                     </span>
                   </div>

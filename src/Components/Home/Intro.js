@@ -12,11 +12,11 @@ const Intro = () => {
           </h1>
           <div className="text-justify md:text-center lg:text-center mt-4">
             <p className="pb-2">
-              The National Association of Proprietors of Private Schools
-              is the apex association of private school owners in Nigeria.
-              was founded in 2005 with the aim of promoting the welfare and
-              interaction of proprietors of private schools and the advancement
-              of quality educational services in Nigeria.
+              The National Association of Proprietors of Private Schools is the
+              apex association of private school owners in Nigeria. was founded
+              in 2005 with the aim of promoting the welfare and interaction of
+              proprietors of private schools and the advancement of quality
+              educational services in Nigeria.
             </p>
             <p>
               This coupled with our vision which compels us to educate and
@@ -130,7 +130,7 @@ const Intro = () => {
       </div>
 
       {/* Testimonial component */}
-      <Testimonial/>
+      <Testimonial />
 
       {/* Apply section*/}
       <div className="bg-primary py-14">
@@ -139,10 +139,10 @@ const Intro = () => {
             Applying to Bell's Academy
           </h2>
           <p className="pb-5 text-md">
-            Enrolling your child into the Bell's community is more than
-            simply joining a school. At Bell's, your child is a star. The
-            mutual mission and vision of cultivating the capacity and character
-            of pupils, enables your child attain the best in life.
+            Enrolling your child into the Bell's community is more than simply
+            joining a school. At Bell's, your child is a star. The mutual
+            mission and vision of cultivating the capacity and character of
+            pupils, enables your child attain the best in life.
           </p>
 
           <Button type="primary" as="link" to="/apply">
